@@ -9,6 +9,7 @@ A comprehensive Python-based resume generator that creates multiple format outpu
 - **ATS Optimization**: Plain text version optimized for Applicant Tracking Systems
 - **High Resolution**: 300 DPI PDF output for print quality
 - **Responsive Design**: HTML version works on all devices
+- **Document Converter**: Convert any HTML document to professional PDF
 
 ## 📋 Generated Formats
 
@@ -60,6 +61,7 @@ resume-generator-project/
 ├── requirements.txt                             # Python dependencies
 ├── generate_professional_resume.py             # Main generator (enhanced)
 ├── generate_resume_pdf.py                      # Basic generator with fallbacks
+├── generate_document_pdf.py                    # Universal HTML to PDF converter
 ├── resume_manager.py                           # File management and summary
 ├── Your_Name_Resume.pdf                        # Standard PDF output (generated)
 ├── Your_Name_Professional_Resume.pdf           # Professional PDF output (generated)
@@ -97,6 +99,18 @@ python3 generate_professional_resume.py
 python3 generate_resume_pdf.py
 ```
 
+### Convert Any HTML Document to PDF
+```bash
+# For legal documents (wider margins)
+python3 generate_document_pdf.py document.html --type legal
+
+# For resumes (standard margins)
+python3 generate_document_pdf.py resume.html --type resume
+
+# For reports (medium margins)
+python3 generate_document_pdf.py report.html --type report --output custom_name.pdf
+```
+
 ## 🎯 Use Case Recommendations
 
 | Scenario | Recommended File | Why |
@@ -106,6 +120,8 @@ python3 generate_resume_pdf.py
 | 🤖 ATS/Online Systems | ATS Text | Plain text, keyword optimized |
 | 📧 Email Attachments | Standard PDF | Small file size, fast loading |
 | 🌐 Web Portfolio | HTML | Web-friendly, easily customizable |
+| 📄 Legal Documents | Any HTML | Use `generate_document_pdf.py --type legal` |
+| 📊 Reports | Any HTML | Use `generate_document_pdf.py --type report` |
 
 ## 📝 License
 
